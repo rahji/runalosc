@@ -2,12 +2,13 @@
 package main
 
 import (
-	"fmt"
-	"os"
 	"context"
-	"time"
-	"math"
+	"fmt"
 	"github.com/emprcl/runal"
+	"log"
+	"math"
+	"os"
+	"time"
 
 	"github.com/hypebeast/go-osc/osc"
 )
@@ -15,9 +16,12 @@ import (
 var r = 10.0
 
 func main() {
+	if len(os.Args) < 1 {
+		log.Fatal("Missing ip:port argument")
+	}
+	addr := os.Args[1] // this is just a test, so there is no validation
 
 	// set up the OSC server
-	addr := "192.168.0.30:12000"
 	d := osc.NewStandardDispatcher()
 	d.AddMsgHandler("/slider1", func(msg *osc.Message) {
 		arg32 := msg.Arguments[0].(float32)
@@ -39,13 +43,12 @@ func main() {
 
 	// give the server a moment to start
 	time.Sleep(100 * time.Millisecond)
-	
+
 	// start runal
-	runal.Run(context.Background(), setup, draw, onKey)
+	runal.Run(context.Background(), setup, draw, onKey, onMouse)
 }
 
-func setup(c *runal.Canvas) {
-}
+func setup(c *runal.Canvas) {}
 
 func draw(c *runal.Canvas) {
 	c.Clear()
@@ -55,5 +58,6 @@ func draw(c *runal.Canvas) {
 	c.Ellipse(c.Width/2, c.Height/2, int(r*2), int(r))
 }
 
-func onKey(c *runal.Canvas, key string) {
-}
+func onKey(c *runal.Canvas, e runal.KeyEvent) {}
+
+func onMouse(c *runal.Canvas, e runal.MouseEvent) {}
