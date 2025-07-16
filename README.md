@@ -11,6 +11,8 @@ Android app, which has `/slider1` as the default message for the first slider.
 
 ## Multitouch Example
 
+![multitouch demo screen capture](multitouch.gif)
+
 I used the "Sensors2OSC" Android app, which can send multitouch
 data. You can also use it to send data from all the other sensors
 on the phone. The app is available on [F-Droid](https://f-droid.org/packages/org.sensors2.osc/)
