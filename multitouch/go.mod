@@ -1,4 +1,4 @@
-module github.com/rahji/runalosc
+module multitouch
 
 go 1.23.3
 
