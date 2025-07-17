@@ -1,9 +1,9 @@
-# Runal with OSC
+# Runal Experiments (some with OSC)j
+
+## Slider Example
 
 This was a quick test to show how [Runal](https://empr.cl/runal/) 
 could be controlled by an OSC client on a phone. 
-
-## Slider Example
 
 A circle's size changes based on a slider on the phone.
 I used the [Osc Controller](https://play.google.com/store/apps/details?id=com.ffsmultimedia.osccontroller&hl=en-US)
@@ -11,7 +11,9 @@ Android app, which has `/slider1` as the default message for the first slider.
 
 ## Multitouch Example
 
-![multitouch demo screen capture](multitouch.gif)
+![multitouch demo screen capture](multitouch.png)
+
+This was another quick OSC test. 
 
 I used the "Sensors2OSC" Android app, which can send multitouch
 data. You can also use it to send data from all the other sensors
@@ -28,7 +30,16 @@ program shows that it is sending messages like this for (fingers 1, 2, and 3):
   
 ```
 
-## Windows Firewall
+## Easing Example
+
+This example shows how to use my [easing](https://github.com/rahji/easing) package to animate with
+different interpolation curves.
+
+![animation demo screen capture](animation.png)
+
+## Notes
+
+### OSC and Windows Firewall
 
 I don't remember having to change the Windows Firewall in the past (as in last week), but
 yesterday I couldn't receive UDP packets on any port in Windows. I had
