@@ -35,7 +35,7 @@ program shows that it is sending messages like this for (fingers 1, 2, and 3):
 This example shows how to use my [easing](https://github.com/rahji/easing) package to animate with
 different interpolation curves.
 
-![animation demo screen capture](animation.png)
+![animation demo screen capture](animation.gif)
 
 ## Notes
 

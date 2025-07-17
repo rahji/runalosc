@@ -26,7 +26,7 @@ var buttons = []Button{
 	{title: "Circular", x: 34, y: 19, curve: easing.Circular},
 	{title: "Square Root", x: 34, y: 20, curve: easing.SquareRoot},
 }
-var currentButton = buttons[0]
+var currentButton = buttons[6]
 var where = easing.Both
 
 var rectSize = 4
